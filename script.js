@@ -51,9 +51,6 @@ function initializeNoButtonBehavior() {
             noBtn.style.top = (rect.top - containerRect.top) + 'px';
         }
         
-        // Shrink the button each time it moves
-        noButtonScale *= 0.85;
-        
         // Get container dimensions
         const containerRect = buttonContainer.getBoundingClientRect();
         const btnRect = noBtn.getBoundingClientRect();
@@ -66,20 +63,12 @@ function initializeNoButtonBehavior() {
         const randomX = Math.random() * maxX;
         const randomY = Math.random() * maxY;
         
-        // Apply the new position and scale
+        // Apply the new position
         noBtn.style.left = randomX + 'px';
         noBtn.style.top = randomY + 'px';
-        noBtn.style.transform = `scale(${noButtonScale})`;
         
         // Add a little animation effect
         noBtn.style.transition = 'all 0.3s ease';
-        
-        // If button becomes too small, make it disappear
-        if (noButtonScale < 0.3) {
-            setTimeout(() => {
-                noBtn.classList.add('disappearing');
-            }, 300);
-        }
         
         // Reset transition after animation
         setTimeout(() => {

@@ -8,7 +8,7 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(to right, #ffb6c1, #ff1493);
+    background: white;
     min-height: 100vh;
     overflow: hidden;
 }
@@ -41,6 +41,15 @@ body {
 }
 
 /* Page 1 Styles */
+#page1 .main-title {
+    font-family: Arial, sans-serif;
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    color: black;
+}
+
 .main-title {
     font-family: 'Dancing Script', cursive;
     font-size: 4rem;
