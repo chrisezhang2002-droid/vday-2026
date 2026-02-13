@@ -55,14 +55,38 @@ body {
 
 .photo-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: auto;
     gap: 1.5rem;
-    max-width: 600px;
+    max-width: 800px;
     margin: 0 auto;
+    align-items: center;
 }
 
 .photo-item {
+    position: relative;
+}
+
+.photo-item.vertical {
+    aspect-ratio: 3/4;
+}
+
+.photo-item.horizontal {
     aspect-ratio: 4/3;
+}
+
+.photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.photo:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
 }
 
 .photo-placeholder {
@@ -193,9 +217,19 @@ body {
 }
 
 .final-text {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     color: rgba(255, 255, 255, 0.9);
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+}
+
+.final-note {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.85);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    font-style: italic;
+    margin-top: 1rem;
 }
 
 /* Responsive Design */
@@ -214,7 +248,13 @@ body {
     
     .photo-grid {
         grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
         max-width: 300px;
+    }
+    
+    .photo-item.vertical,
+    .photo-item.horizontal {
+        aspect-ratio: 4/3;
     }
     
     .button-container {
