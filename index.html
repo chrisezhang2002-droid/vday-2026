@@ -3,194 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Valentine's Day, My Love ❤️</title>
+    <title>Happy Valentine's Day Alyssa ❤️</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Floating Hearts Animation -->
-    <div class="floating-hearts"></div>
-    
-    <!-- Header -->
-    <header class="header">
-        <nav class="nav">
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#messages">Love Notes</a></li>
-                <li><a href="#memories">Memories</a></li>
-                <li><a href="#promise">Promise</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1 class="hero-title">Happy Valentine's Day</h1>
-            <p class="hero-subtitle">To the most amazing woman in my life</p>
-            <div class="heart-container">
-                <div class="heart"></div>
-            </div>
-            <button class="cta-button" id="startJourney">Start Our Love Journey</button>
-        </div>
-        <div class="hero-bg"></div>
-    </section>
-
-    <!-- Love Messages Section -->
-    <section id="messages" class="love-messages">
-        <div class="container">
-            <h2 class="section-title">Why I Love You</h2>
-            <div class="messages-grid">
-                <div class="message-card" data-message="1">
-                    <div class="card-front">
-                        <h3>Your Smile</h3>
-                        <p>Click to reveal</p>
-                    </div>
-                    <div class="card-back">
-                        <p>Your smile lights up my entire world and makes every day brighter. It's the first thing I think about when I wake up.</p>
-                    </div>
-                </div>
-                <div class="message-card" data-message="2">
-                    <div class="card-front">
-                        <h3>Your Kindness</h3>
-                        <p>Click to reveal</p>
-                    </div>
-                    <div class="card-back">
-                        <p>Your compassionate heart and the way you care for everyone around you shows me what true love really means.</p>
-                    </div>
-                </div>
-                <div class="message-card" data-message="3">
-                    <div class="card-front">
-                        <h3>Your Laugh</h3>
-                        <p>Click to reveal</p>
-                    </div>
-                    <div class="card-back">
-                        <p>The sound of your laughter is my favorite melody. It fills my heart with pure joy and makes everything feel perfect.</p>
-                    </div>
-                </div>
-                <div class="message-card" data-message="4">
-                    <div class="card-front">
-                        <h3>Your Dreams</h3>
-                        <p>Click to reveal</p>
-                    </div>
-                    <div class="card-back">
-                        <p>I love how passionate you are about your dreams and goals. Your ambition and determination inspire me every day.</p>
-                    </div>
+    <!-- Page 1: Welcome -->
+    <div id="page1" class="page active">
+        <div class="page-content">
+            <h1 class="main-title">Happy Valentine's Day Alyssa</h1>
+            <div class="photo-section">
+                <div class="photo-placeholder">
+                    <p>Add your favorite photos here ❤️</p>
+                    <!-- You can add actual photos by replacing the placeholder -->
                 </div>
             </div>
+            <button class="continue-btn" onclick="goToPage2()">Continue</button>
         </div>
-    </section>
+    </div>
 
-    <!-- Photo Memories Section -->
-    <section id="memories" class="photo-gallery">
-        <div class="container">
-            <h2 class="section-title">Our Beautiful Memories</h2>
-            <div class="gallery-container">
-                <div class="photo-item" data-photo="1">
-                    <img src="assets/photos/photo1.jpg" alt="Our first date" />
-                    <div class="photo-overlay">
-                        <h3>First Date</h3>
-                        <p>The day you said yes to coffee ☕</p>
-                    </div>
-                </div>
-                <div class="photo-item" data-photo="2">
-                    <img src="assets/photos/photo2.jpg" alt="Beach sunset" />
-                    <div class="photo-overlay">
-                        <h3>Beach Sunset</h3>
-                        <p>Watching sunsets together 🌅</p>
-                    </div>
-                </div>
-                <div class="photo-item" data-photo="3">
-                    <img src="assets/photos/photo3.jpg" alt="Cooking together" />
-                    <div class="photo-overlay">
-                        <h3>Cooking Together</h3>
-                        <p>Making memories in the kitchen 👨‍🍳</p>
-                    </div>
-                </div>
-                <div class="photo-item" data-photo="4">
-                    <img src="assets/photos/photo4.jpg" alt="Adventure time" />
-                    <div class="photo-overlay">
-                        <h3>Adventures</h3>
-                        <p>Exploring the world together 🗺️</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Interactive Love Counter -->
-    <section class="love-counter">
-        <div class="container">
-            <h2 class="section-title">Our Love Timeline</h2>
-            <div class="counter-grid">
-                <div class="counter-item">
-                    <div class="counter-number" data-target="365">0</div>
-                    <p>Days Together</p>
-                </div>
-                <div class="counter-item">
-                    <div class="counter-number" data-target="1000000">0</div>
-                    <p>Reasons I Love You</p>
-                </div>
-                <div class="counter-item">
-                    <div class="counter-number" data-target="8760">0</div>
-                    <p>Hours of Happiness</p>
-                </div>
-                <div class="counter-item">
-                    <div class="counter-number" data-target="1">0</div>
-                    <p>Soulmate Found</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Promise Section -->
-    <section id="promise" class="promise-section">
-        <div class="container">
-            <h2 class="section-title">My Promise to You</h2>
-            <div class="promise-content">
-                <div class="promise-text">
-                    <p class="promise-main">
-                        I promise to love you not just on Valentine's Day, but every single day of our lives together. 
-                        I promise to support your dreams, celebrate your victories, and be your comfort during tough times.
-                    </p>
-                    <p class="promise-sub">
-                        You are my today and all of my tomorrows. Thank you for being the most incredible part of my life.
-                    </p>
-                    <div class="signature">
-                        <p>Forever yours,</p>
-                        <p class="name">Your Loving Boyfriend ❤️</p>
-                    </div>
-                </div>
-                <div class="promise-visual">
-                    <div class="infinity-heart">
-                        <div class="heart-shape"></div>
-                        <div class="infinity-symbol">∞</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Special Message Popup -->
-    <div class="popup-overlay" id="popupOverlay">
-        <div class="popup-content">
-            <span class="popup-close" id="popupClose">&times;</span>
-            <h3>Special Message Just for You</h3>
-            <p>Every day with you feels like Valentine's Day. You make my heart skip a beat and my world infinitely brighter. I'm so grateful to have you in my life.</p>
-            <div class="popup-hearts">
-                <span>💕</span>
-                <span>💖</span>
-                <span>💝</span>
+    <!-- Page 2: The Question -->
+    <div id="page2" class="page">
+        <div class="page-content">
+            <h1 class="question-title">Will you be my valentine?</h1>
+            <div class="button-container">
+                <button id="yesBtn" class="yes-btn" onclick="showFinalMessage()">YES! ❤️</button>
+                <button id="noBtn" class="no-btn">No</button>
             </div>
         </div>
     </div>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2026 Made with ❤️ for the most amazing girlfriend in the world</p>
+    <!-- Final Message -->
+    <div id="finalMessage" class="page">
+        <div class="page-content">
+            <h1 class="final-title">What an honour that I can be your valentine</h1>
+            <p class="final-text">I left a note hidden in your room, try to find it ❤️</p>
         </div>
-    </footer>
+    </div>
 
     <script src="script.js"></script>
 </body>
