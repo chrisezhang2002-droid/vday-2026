@@ -13,9 +13,27 @@
         <div class="page-content">
             <h1 class="main-title">Happy Valentine's Day Alyssa</h1>
             <div class="photo-section">
-                <div class="photo-placeholder">
-                    <p>Add your favorite photos here ❤️</p>
-                    <!-- You can add actual photos by replacing the placeholder -->
+                <div class="photo-grid">
+                    <div class="photo-item">
+                        <div class="photo-placeholder">
+                            <p>Photo 1 ❤️</p>
+                        </div>
+                    </div>
+                    <div class="photo-item">
+                        <div class="photo-placeholder">
+                            <p>Photo 2 💕</p>
+                        </div>
+                    </div>
+                    <div class="photo-item">
+                        <div class="photo-placeholder">
+                            <p>Photo 3 💖</p>
+                        </div>
+                    </div>
+                    <div class="photo-item">
+                        <div class="photo-placeholder">
+                            <p>Photo 4 💝</p>
+                        </div>
+                    </div>
                 </div>
             </div>
             <button class="continue-btn" onclick="goToPage2()">Continue</button>
@@ -28,7 +46,7 @@
             <h1 class="question-title">Will you be my valentine?</h1>
             <div class="button-container">
                 <button id="yesBtn" class="yes-btn" onclick="showFinalMessage()">YES! ❤️</button>
-                <button id="noBtn" class="no-btn">No</button>
+                <button id="noBtn" class="no-btn" onclick="disappearNoButton()">No</button>
             </div>
         </div>
     </div>
