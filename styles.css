@@ -146,6 +146,7 @@ body {
     align-items: center;
     position: relative;
     height: 200px;
+    flex-wrap: wrap;
 }
 
 .yes-btn {
@@ -186,12 +187,13 @@ body {
     background: rgba(255, 255, 255, 0.2);
     color: white;
     border: 2px solid rgba(255, 255, 255, 0.5);
-    padding: 15px 30px;
-    font-size: 1.2rem;
-    border-radius: 30px;
+    padding: 20px 50px;
+    font-size: 1.8rem;
+    font-weight: 500;
+    border-radius: 50px;
     cursor: pointer;
     transition: all 0.3s ease;
-    position: absolute;
+    position: relative;
     backdrop-filter: blur(10px);
 }
 

@@ -42,6 +42,15 @@ function initializeNoButtonBehavior() {
     });
     
     function moveNoButton() {
+        // Convert to absolute positioning on first move
+        if (noBtn.style.position !== 'absolute') {
+            const rect = noBtn.getBoundingClientRect();
+            const containerRect = buttonContainer.getBoundingClientRect();
+            noBtn.style.position = 'absolute';
+            noBtn.style.left = (rect.left - containerRect.left) + 'px';
+            noBtn.style.top = (rect.top - containerRect.top) + 'px';
+        }
+        
         // Shrink the button each time it moves
         noButtonScale *= 0.85;
         
@@ -78,11 +87,7 @@ function initializeNoButtonBehavior() {
         }, 300);
     }
     
-    // Initial positioning of the No button
-    const initialX = Math.random() * (buttonContainer.offsetWidth - noBtn.offsetWidth);
-    const initialY = Math.random() * (buttonContainer.offsetHeight - noBtn.offsetHeight);
-    noBtn.style.left = initialX + 'px';
-    noBtn.style.top = initialY + 'px';
+    // No initial positioning needed - button starts beside Yes button
 }
 
 // Function to make No button disappear when clicked
