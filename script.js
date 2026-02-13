@@ -101,19 +101,25 @@ function disappearNoButton() {
         const message = document.createElement('p');
         message.textContent = "You can't escape love! 💕";
         message.style.cssText = `
-            position: absolute;
-            color: rgba(255, 255, 255, 0.8);
-            font-size: 1.2rem;
+            position: fixed;
+            top: 30%;
+            left: 50%;
+            transform: translateX(-50%);
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.5rem;
+            font-weight: 600;
             text-align: center;
-            width: 100%;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+            pointer-events: none;
             animation: fadeInOut 3s ease;
         `;
-        buttonContainer.appendChild(message);
+        document.body.appendChild(message);
         
         // Remove message after animation
         setTimeout(() => {
             if (message.parentNode) {
-                message.parentNode.removeChild(message);
+                document.body.removeChild(message);
             }
         }, 3000);
     }, 300);
