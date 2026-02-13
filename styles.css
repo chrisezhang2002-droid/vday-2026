@@ -28,6 +28,11 @@ body {
     transition: all 0.5s ease;
 }
 
+/* Page 2 and Final Message - Pink Gradient Background */
+#page2, #finalMessage {
+    background: linear-gradient(to right, #ffb6c1, #ff1493);
+}
+
 .page.active {
     opacity: 1;
     visibility: visible;

@@ -51,15 +51,19 @@ function initializeNoButtonBehavior() {
             noBtn.style.top = (rect.top - containerRect.top) + 'px';
         }
         
-        // Get container dimensions
+        // Calculate available space with larger movement range
         const containerRect = buttonContainer.getBoundingClientRect();
         const btnRect = noBtn.getBoundingClientRect();
         
-        // Calculate available space
-        const maxX = containerRect.width - btnRect.width;
-        const maxY = containerRect.height - btnRect.height;
+        // Use full viewport for movement range
+        const viewportWidth = window.innerWidth;
+        const viewportHeight = window.innerHeight;
         
-        // Generate random position within container
+        // Calculate available space with larger bounds
+        const maxX = Math.max(0, viewportWidth - btnRect.width - 100); // 100px margin
+        const maxY = Math.max(0, viewportHeight - btnRect.height - 100);
+        
+        // Generate random position with larger movement distance
         const randomX = Math.random() * maxX;
         const randomY = Math.random() * maxY;
         
@@ -88,7 +92,7 @@ function disappearNoButton() {
     setTimeout(() => {
         const buttonContainer = document.querySelector('.button-container');
         const message = document.createElement('p');
-        message.textContent = "You can't escape love! 💕";
+        message.textContent = "you're stuck with me";
         message.style.cssText = `
             position: fixed;
             top: 30%;
